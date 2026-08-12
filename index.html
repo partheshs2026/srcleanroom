@@ -15,7 +15,7 @@
 
     <style>
         /* ==========================================================================
-           1. DESIGN SYSTEM & MODERN CSS VARIABLES
+           1. DESIGN SYSTEM & MODERN CSS VARIABLES (LIGHT THEME)
            ========================================================================== */
         :root {
             --font-main: 'Plus Jakarta Sans', sans-serif;
@@ -23,26 +23,26 @@
             /* Color Palette Matched to Logo */
             --brand-navy: #0A3981;
             --brand-green: #2B9339;
-            --brand-cyan: #00E5FF;
+            --brand-cyan: #0088cc;
             
-            /* Dark Theme */
-            --bg-base: #060b13;
-            --bg-surface: #0b1528;
-            --bg-card: rgba(15, 27, 48, 0.6);
-            --border-glass: rgba(0, 229, 255, 0.15);
-            --border-glass-hover: rgba(0, 229, 255, 0.4);
+            /* Light Theme Palette */
+            --bg-base: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-card: rgba(255, 255, 255, 0.85);
+            --border-glass: rgba(10, 57, 129, 0.12);
+            --border-glass-hover: rgba(43, 147, 57, 0.4);
             
-            --text-primary: #f0f6fc;
-            --text-secondary: #91a3b8;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
             --text-muted: #64748b;
             
-            --primary: #00e5ff;
-            --primary-glow: rgba(0, 229, 255, 0.35);
+            --primary: #0A3981;
+            --primary-glow: rgba(10, 57, 129, 0.15);
             --secondary: #0A3981;
             --accent: #2B9339;
             
-            --header-bg: rgba(6, 11, 19, 0.9);
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --header-bg: rgba(255, 255, 255, 0.92);
+            --glass-shadow: 0 10px 30px rgba(10, 57, 129, 0.06);
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -133,6 +133,7 @@
             font-weight: 800;
             letter-spacing: -0.5px;
             margin-bottom: 1rem;
+            color: var(--brand-navy);
         }
 
         .section-desc {
@@ -156,18 +157,19 @@
         .btn-primary {
             background: linear-gradient(135deg, var(--brand-navy), var(--brand-green));
             color: #fff;
-            box-shadow: 0 4px 20px rgba(10, 57, 129, 0.4);
+            box-shadow: 0 4px 20px rgba(10, 57, 129, 0.25);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(43, 147, 57, 0.4);
+            box-shadow: 0 8px 25px rgba(43, 147, 57, 0.3);
         }
 
         .btn-outline {
-            background: transparent;
-            color: var(--text-primary);
+            background: #ffffff;
+            color: var(--brand-navy);
             border: 1px solid var(--border-glass);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
         }
 
         .btn-outline:hover {
@@ -202,6 +204,7 @@
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-glass);
             transition: var(--transition-smooth);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
 
         .navbar-container {
@@ -218,7 +221,8 @@
             padding: 5px 12px;
             background: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         .logo-img {
@@ -236,14 +240,14 @@
 
         .nav-link {
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--text-secondary);
             transition: var(--transition-smooth);
             position: relative;
         }
 
         .nav-link:hover, .nav-link.active {
-            color: var(--brand-green);
+            color: var(--brand-navy);
         }
 
         .nav-link::after {
@@ -286,8 +290,8 @@
             align-items: center;
             padding-top: 110px;
             overflow: hidden;
-            background: radial-gradient(circle at 80% 20%, rgba(43, 147, 57, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 20% 80%, rgba(10, 57, 129, 0.12) 0%, transparent 50%);
+            background: radial-gradient(circle at 80% 20%, rgba(43, 147, 57, 0.06) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(10, 57, 129, 0.08) 0%, transparent 50%);
         }
 
         .hero-grid {
@@ -302,7 +306,7 @@
             align-items: center;
             gap: 0.5rem;
             background: rgba(43, 147, 57, 0.1);
-            border: 1px solid rgba(43, 147, 57, 0.3);
+            border: 1px solid rgba(43, 147, 57, 0.25);
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.85rem;
@@ -317,6 +321,7 @@
             line-height: 1.15;
             letter-spacing: -1px;
             margin-bottom: 1.5rem;
+            color: var(--brand-navy);
         }
 
         .hero-title .typing-text {
@@ -335,7 +340,7 @@
             font-size: 1.25rem;
             color: var(--text-secondary);
             margin-bottom: 2rem;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .hero-cta {
@@ -348,6 +353,7 @@
             padding: 2.5rem;
             position: relative;
             text-align: center;
+            background: #ffffff;
         }
 
         .hero-card-logo-wrap {
@@ -357,7 +363,8 @@
             background: #ffffff;
             padding: 12px;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .hero-card-logo-wrap img {
@@ -379,6 +386,7 @@
         .about-content h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
+            color: var(--brand-navy);
         }
 
         .about-content p {
@@ -389,7 +397,7 @@
         .mission-box {
             padding: 1.5rem;
             border-left: 4px solid var(--brand-green);
-            background: rgba(43, 147, 57, 0.05);
+            background: rgba(43, 147, 57, 0.06);
             margin-top: 1.5rem;
             border-radius: 0 12px 12px 0;
         }
@@ -409,6 +417,7 @@
             padding: 1.5rem;
             text-align: center;
             overflow: hidden;
+            background: #ffffff;
         }
 
         .engineer-img-wrap {
@@ -435,6 +444,7 @@
             font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 0.25rem;
+            color: var(--brand-navy);
         }
 
         .engineer-role {
@@ -467,6 +477,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            background: #ffffff;
         }
 
         .service-card::before {
@@ -501,6 +512,7 @@
         .service-title {
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
+            color: var(--brand-navy);
         }
 
         .service-desc {
@@ -526,15 +538,18 @@
             gap: 0.75rem;
             font-weight: 600;
             border-radius: 50px;
-            background: var(--bg-card);
+            background: #ffffff;
             border: 1px solid var(--border-glass);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
             transition: var(--transition-smooth);
+            color: var(--text-primary);
         }
 
         .industry-chip:hover {
             border-color: var(--brand-green);
             color: var(--brand-green);
             transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(43, 147, 57, 0.12);
         }
 
         .standards-grid {
@@ -547,6 +562,7 @@
         .standard-card {
             padding: 1.5rem;
             text-align: center;
+            background: #ffffff;
         }
 
         .standard-title {
@@ -601,7 +617,7 @@
             border-radius: 50%;
             position: absolute;
             top: 5px;
-            box-shadow: 0 0 10px var(--brand-green);
+            box-shadow: 0 0 10px rgba(43, 147, 57, 0.4);
         }
 
         .timeline-item:nth-child(odd) .timeline-dot { right: -10px; }
@@ -609,6 +625,14 @@
 
         .timeline-content {
             padding: 1.5rem;
+            background: #ffffff;
+        }
+
+        .timeline-content h3 {
+            color: var(--brand-navy);
+            font-size: 1.1rem;
+            margin-top: 0.25rem;
+            margin-bottom: 0.5rem;
         }
 
         .step-num {
@@ -630,6 +654,7 @@
 
         .stat-card {
             padding: 2rem 1rem;
+            background: #ffffff;
         }
 
         .stat-number {
@@ -658,6 +683,7 @@
             overflow: hidden;
             height: 250px;
             cursor: pointer;
+            box-shadow: var(--glass-shadow);
         }
 
         .gallery-item img {
@@ -674,7 +700,7 @@
         .gallery-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(6, 11, 19, 0.9), transparent);
+            background: linear-gradient(to top, rgba(10, 57, 129, 0.9), transparent);
             display: flex;
             align-items: flex-end;
             padding: 1.5rem;
@@ -690,7 +716,7 @@
         .lightbox {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.85);
             z-index: 2000;
             display: none;
             align-items: center;
@@ -731,6 +757,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            background: #ffffff;
         }
 
         .stars {
@@ -766,6 +793,7 @@
             margin-bottom: 1rem;
             border-radius: 12px;
             overflow: hidden;
+            background: #ffffff;
         }
 
         .faq-header {
@@ -775,6 +803,7 @@
             align-items: center;
             cursor: pointer;
             font-weight: 600;
+            color: var(--brand-navy);
         }
 
         .faq-content {
@@ -840,7 +869,7 @@
         .form-control {
             width: 100%;
             padding: 0.85rem 1rem;
-            background: rgba(255, 255, 255, 0.03);
+            background: #ffffff;
             border: 1px solid var(--border-glass);
             border-radius: 8px;
             color: var(--text-primary);
@@ -851,7 +880,7 @@
 
         .form-control:focus {
             border-color: var(--brand-green);
-            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0 3px rgba(43, 147, 57, 0.15);
         }
 
         textarea.form-control {
@@ -866,10 +895,11 @@
             overflow: hidden;
             margin-top: 1.5rem;
             border: 1px solid var(--border-glass);
+            box-shadow: var(--glass-shadow);
         }
 
         .footer {
-            background: var(--bg-surface);
+            background: #ffffff;
             border-top: 1px solid var(--border-glass);
             padding: 4rem 0 2rem 0;
             margin-top: 6rem;
@@ -887,7 +917,9 @@
             padding: 8px 12px;
             background: #ffffff;
             border-radius: 8px;
+            border: 1px solid var(--border-glass);
             margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .footer-logo-wrap img {
@@ -904,7 +936,7 @@
         .footer-title {
             font-size: 1.1rem;
             margin-bottom: 1.25rem;
-            color: var(--text-primary);
+            color: var(--brand-navy);
         }
 
         .footer-links li {
@@ -930,13 +962,14 @@
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background: var(--bg-card);
+            background: #ffffff;
             border: 1px solid var(--border-glass);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-secondary);
             transition: var(--transition-smooth);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
         }
 
         .social-icon:hover {
@@ -966,7 +999,7 @@
             color: #fff;
             font-size: 1.25rem;
             z-index: 999;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             transition: var(--transition-smooth);
         }
 
@@ -981,7 +1014,7 @@
 
         .scroll-top {
             right: 5.5rem;
-            background: var(--bg-card);
+            background: #ffffff;
             border: 1px solid var(--border-glass);
             color: var(--text-primary);
             opacity: 0;
@@ -1039,10 +1072,11 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 90px);
-                background: var(--bg-surface);
+                background: #ffffff;
                 flex-direction: column;
                 padding: 3rem;
                 transition: var(--transition-smooth);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             }
 
             .nav-links.active {
@@ -1115,11 +1149,11 @@
                         <div class="hero-card-logo-wrap">
                             <img src="Logo.jpeg" alt="SR Cleanroom Service Logo">
                         </div>
-                        <h3>20+ Years of Excellence</h3>
+                        <h3 style="color: var(--brand-navy);">20+ Years of Excellence</h3>
                         <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.95rem;">
                             Delivering end-to-end cleanroom contamination control and custom HVAC design across India.
                         </p>
-                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass); display: flex; justify-content: space-around;">
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass); display: flex; justify-style: space-around;">
                             <div>
                                 <strong style="display: block; font-size: 1.2rem; color: var(--brand-green);">200+</strong>
                                 <span style="font-size: 0.8rem; color: var(--text-muted);">Projects Done</span>
@@ -1139,7 +1173,7 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="reveal">
-                        <div class="glass-panel" style="padding: 1rem; position: relative;">
+                        <div class="glass-panel" style="padding: 1rem; position: relative; background: #ffffff;">
                             <img src="https://conceptgroupllc.com/wp-content/uploads/2021/12/microbiologist-is-testing-the-sample-under-the-laminar-air-flow-cabinet-in-the-clean-room-of-quality-control-laboratory-in-pharmaceutical_1-1.jpg" alt="Cleanroom Engineer working under Laminar Air Flow" style="border-radius: 12px; width:100%;">
                         </div>
                     </div>
@@ -1164,7 +1198,7 @@
         </section>
 
         <!-- Engineers & Experts Section -->
-        <section id="engineers" class="section-padding" style="background: rgba(0,0,0,0.1);">
+        <section id="engineers" class="section-padding" style="background: rgba(10, 57, 129, 0.02);">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="section-tag">Technical Expertise</span>
@@ -1271,7 +1305,7 @@
         </section>
 
         <!-- Industries Covered -->
-        <section id="industries" class="section-padding" style="background: rgba(0,0,0,0.1);">
+        <section id="industries" class="section-padding" style="background: rgba(10, 57, 129, 0.02);">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="section-tag">Sectors We Serve</span>
@@ -1328,7 +1362,7 @@
         </section>
 
         <!-- Process Timeline -->
-        <section id="process" class="section-padding" style="background: rgba(0,0,0,0.1);">
+        <section id="process" class="section-padding" style="background: rgba(10, 57, 129, 0.02);">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="section-tag">Step-By-Step Workflow</span>
@@ -1430,7 +1464,7 @@
         </section>
 
         <!-- Stats Section -->
-        <section class="section-padding" style="background: rgba(43, 147, 57, 0.03); border-y: 1px solid var(--border-glass);">
+        <section class="section-padding" style="background: rgba(43, 147, 57, 0.04); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
             <div class="container">
                 <div class="stats-grid">
                     <div class="glass-panel stat-card reveal">
@@ -1471,7 +1505,7 @@
                         <div class="gallery-overlay">
                             <div>
                                 <h4 style="color:#fff;">Modular Cleanroom Panels</h4>
-                                <p style="font-size:0.8rem; color:var(--brand-green);">Engineered Panel Installation</p>
+                                <p style="font-size:0.8rem; color:#00E5FF;">Engineered Panel Installation</p>
                             </div>
                         </div>
                     </div>
@@ -1481,7 +1515,7 @@
                         <div class="gallery-overlay">
                             <div>
                                 <h4 style="color:#fff;">Pharma Laminar Airflow Room</h4>
-                                <p style="font-size:0.8rem; color:var(--brand-green);">Testing & Quality Control</p>
+                                <p style="font-size:0.8rem; color:#00E5FF;">Testing & Quality Control</p>
                             </div>
                         </div>
                     </div>
@@ -1491,7 +1525,7 @@
                         <div class="gallery-overlay">
                             <div>
                                 <h4 style="color:#fff;">Laminar Flow Pass Box</h4>
-                                <p style="font-size:0.8rem; color:var(--brand-green);">Airlock Material Transfer</p>
+                                <p style="font-size:0.8rem; color:#00E5FF;">Airlock Material Transfer</p>
                             </div>
                         </div>
                     </div>
@@ -1501,7 +1535,7 @@
                         <div class="gallery-overlay">
                             <div>
                                 <h4 style="color:#fff;">Hospital OT Unit</h4>
-                                <p style="font-size:0.8rem; color:var(--brand-green);">Laminar Flow Facility</p>
+                                <p style="font-size:0.8rem; color:#00E5FF;">Laminar Flow Facility</p>
                             </div>
                         </div>
                     </div>
@@ -1510,7 +1544,7 @@
         </section>
 
         <!-- Testimonials & FAQ -->
-        <section class="section-padding" style="background: rgba(0,0,0,0.1);">
+        <section class="section-padding" style="background: rgba(10, 57, 129, 0.02);">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="section-tag">Client Feedback</span>
@@ -1526,7 +1560,7 @@
                         <div class="client-info">
                             <div class="client-avatar">RK</div>
                             <div>
-                                <strong style="display:block; font-size:0.95rem;">Rajesh Kumar</strong>
+                                <strong style="display:block; font-size:0.95rem; color: var(--brand-navy);">Rajesh Kumar</strong>
                                 <span style="font-size:0.8rem; color:var(--text-muted);">Plant Head, BioPharma Corp</span>
                             </div>
                         </div>
@@ -1540,7 +1574,7 @@
                         <div class="client-info">
                             <div class="client-avatar">VS</div>
                             <div>
-                                <strong style="display:block; font-size:0.95rem;">Vikram Sharma</strong>
+                                <strong style="display:block; font-size:0.95rem; color: var(--brand-navy);">Vikram Sharma</strong>
                                 <span style="font-size:0.8rem; color:var(--text-muted);">Operations Director, Apex Healthcare</span>
                             </div>
                         </div>
@@ -1554,7 +1588,7 @@
                         <div class="client-info">
                             <div class="client-avatar">SN</div>
                             <div>
-                                <strong style="display:block; font-size:0.95rem;">Suresh Nair</strong>
+                                <strong style="display:block; font-size:0.95rem; color: var(--brand-navy);">Suresh Nair</strong>
                                 <span style="font-size:0.8rem; color:var(--text-muted);">QA Lead, MicroLabs</span>
                             </div>
                         </div>
@@ -1613,7 +1647,7 @@
                             <div class="contact-info-item">
                                 <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                                 <div>
-                                    <strong style="display:block;">Address</strong>
+                                    <strong style="display:block; color: var(--brand-navy);">Address</strong>
                                     <span style="font-size:0.9rem; color:var(--text-secondary);">
                                         34/2, House No 17, First Floor, Sai Shakti Layout, Begur Hobli, Electronic City Road & Post, Near Delhi Public School, Bettadasanapura Village, Bengaluru - 560068
                                     </span>
@@ -1623,7 +1657,7 @@
                             <div class="contact-info-item">
                                 <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                                 <div>
-                                    <strong style="display:block;">Phone Lines</strong>
+                                    <strong style="display:block; color: var(--brand-navy);">Phone Lines</strong>
                                     <span style="font-size:0.9rem; color:var(--text-secondary);">
                                         +91 8904162496 / +91 7996992079
                                     </span>
@@ -1633,7 +1667,7 @@
                             <div class="contact-info-item">
                                 <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                                 <div>
-                                    <strong style="display:block;">Email Address</strong>
+                                    <strong style="display:block; color: var(--brand-navy);">Email Address</strong>
                                     <span style="font-size:0.9rem; color:var(--text-secondary);">
                                         marketing@srcleanroom.in / sales@srcleanroom.in
                                     </span>
@@ -1647,8 +1681,8 @@
                         </div>
                     </div>
 
-                    <div class="glass-panel reveal" style="padding: 2.5rem;">
-                        <h3 style="margin-bottom: 1.5rem;">Request a Consultation</h3>
+                    <div class="glass-panel reveal" style="padding: 2.5rem; background: #ffffff;">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--brand-navy);">Request a Consultation</h3>
                         <form id="contact-form" onsubmit="handleFormSubmit(event)">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Your Name *" required>
@@ -1660,7 +1694,7 @@
                                 <input type="tel" class="form-control" placeholder="Phone Number *" required>
                             </div>
                             <div class="form-group">
-                                <select class="form-control" style="background: var(--bg-surface);">
+                                <select class="form-control">
                                     <option>Select Service Required</option>
                                     <option>HVAC Design & Installation</option>
                                     <option>Turnkey Cleanroom Project</option>
